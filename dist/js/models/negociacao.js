@@ -8,4 +8,4 @@ export class Negociacao {
         this.#quantidade = quantidade;
         this.#valor = valor;
     }
-}
+};
