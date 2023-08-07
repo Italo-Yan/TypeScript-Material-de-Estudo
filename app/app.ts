@@ -16,3 +16,4 @@ form.addEventListener('submit', event => {
     // Esse método é responsável por adicionar uma nova negociação com base nos dados do formulário.
     controller.adiciona();
 });
+

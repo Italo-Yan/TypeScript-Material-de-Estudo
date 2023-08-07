@@ -1,6 +1,7 @@
 // Importando as classes Negociacao e Negociacoes do módulo '../models/negociacao.js' para que possamos utilizá-las neste arquivo.
 import { Negociacao } from '../models/negociacao.js';
 import { Negociacoes } from '../models/negociacoes.js';
+import { NegociacoesView } from '../views/necociacoes-view.js';
 
 // Definindo a classe NegociacaoController, responsável por controlar a interação entre a interface do usuário (HTML) e as ações relacionadas a negociações.
 export class NegociacaoController {
@@ -11,6 +12,7 @@ export class NegociacaoController {
     
     // Criação de uma instância da classe Negociacoes, que será utilizada para armazenar as negociações adicionadas pelo usuário.
     private negociacoes = new Negociacoes();
+    private negociacoesView = new NegociacoesView('#negociacoesView') 
 
     // O construtor da classe, que é executado ao criar uma instância de NegociacaoController.
     // Aqui, realizamos a busca pelos elementos HTML utilizando seus IDs e atribuímos esses elementos às propriedades do objeto.
@@ -18,6 +20,7 @@ export class NegociacaoController {
         this.inputData = document.querySelector('#data');
         this.inputQuantidade = document.querySelector('#quantidade');
         this.inputValor = document.querySelector('#valor');
+        this.negociacoesView.update();
     }
 
     // Método chamado quando o usuário adiciona uma nova negociação.
